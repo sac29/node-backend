@@ -10,5 +10,8 @@
     "javascript"
   ],
   "author": "Sachin",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.3.2"
+  }
 }
