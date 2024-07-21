@@ -17,7 +17,6 @@ app.use(cookieParser());
 //routes import
 
 import userRouter from "./routes/user.routes.js";
-import multer from "multer";
 
 // routes declaration
 
