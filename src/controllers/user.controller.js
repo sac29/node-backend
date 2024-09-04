@@ -21,9 +21,7 @@ const generateAccessAndRefreshToken = async (userId) => {
 }
 
 const registerUser = asyncHandler(async (req, res) => {
-    // res.status(200).json({
-    //     message: "ok"
-    // })
+
     console.log('body', req.body)
     const { fullName, username, email, password } = req.body;
     if ([fullName, username, email, password].some(field => field?.trim() === "")) {
@@ -256,7 +254,7 @@ const updateUserAvatar = asyncHandler(async (req, res) => {
 
     return req
         .status(200)
-        .json(200, user, "Avatar image updated successfully")
+        .json(new ApiResponse(200, user, "Avatar image updated successfully"))
 });
 
 const updateUserCoverImage = asyncHandler(async (req, res) => {
@@ -280,7 +278,7 @@ const updateUserCoverImage = asyncHandler(async (req, res) => {
 
     return req
         .status(200)
-        .json(200, user, "Cover image updated successfully")
+        .json(new ApiResponse(200, user, "Cover image updated successfully"))
 })
 
 export {
